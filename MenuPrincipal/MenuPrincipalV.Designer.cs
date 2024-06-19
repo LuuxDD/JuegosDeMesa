@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalV));
             dataGridJuegos = new DataGridView();
             bntAgregar = new Button();
             btnEditar = new Button();
@@ -45,24 +46,25 @@
             dataGridJuegos.ReadOnly = true;
             dataGridJuegos.RowHeadersVisible = false;
             dataGridJuegos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridJuegos.Size = new Size(503, 242);
+            dataGridJuegos.Size = new Size(503, 200);
             dataGridJuegos.TabIndex = 1;
             // 
             // bntAgregar
             // 
             bntAgregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            bntAgregar.Location = new Point(53, 319);
+            bntAgregar.BackColor = SystemColors.ButtonFace;
+            bntAgregar.Location = new Point(106, 267);
             bntAgregar.Name = "bntAgregar";
             bntAgregar.Size = new Size(75, 23);
             bntAgregar.TabIndex = 2;
             bntAgregar.Text = "&Agregar";
-            bntAgregar.UseVisualStyleBackColor = true;
+            bntAgregar.UseVisualStyleBackColor = false;
             bntAgregar.Click += bntAgregar_Click;
             // 
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.Location = new Point(154, 319);
+            btnEditar.Location = new Point(271, 267);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 23);
             btnEditar.TabIndex = 3;
@@ -73,7 +75,7 @@
             // bntEliminar
             // 
             bntEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            bntEliminar.Location = new Point(254, 319);
+            bntEliminar.Location = new Point(438, 267);
             bntEliminar.Name = "bntEliminar";
             bntEliminar.Size = new Size(75, 23);
             bntEliminar.TabIndex = 4;
@@ -86,14 +88,19 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(634, 372);
+            BackgroundImageLayout = ImageLayout.None;
+            ClientSize = new Size(627, 302);
             Controls.Add(bntEliminar);
             Controls.Add(btnEditar);
             Controls.Add(bntAgregar);
             Controls.Add(dataGridJuegos);
+            Cursor = Cursors.Hand;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MenuPrincipalV";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Juegos de Mesa 0.1";
+            TransparencyKey = Color.PeachPuff;
             ((System.ComponentModel.ISupportInitialize)dataGridJuegos).EndInit();
             ResumeLayout(false);
         }

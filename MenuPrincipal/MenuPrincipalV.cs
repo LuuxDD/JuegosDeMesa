@@ -55,7 +55,7 @@ namespace MenuPrincipal
         {
             //obtener el id del libro seleccionado
             string? idJuegoSeleccionado = (string)dataGridJuegos.CurrentRow.Cells[0].Value;
-           
+
             //instanciar la ventana agregarEditarJuegos
             //(vamos a teer que crear un nuevo constuctor en ese formulario que este preparado para recibir al Id)
             AgregarEditarJuegos agregarEditarJuegos = new AgregarEditarJuegos(idJuegoSeleccionado);
@@ -65,6 +65,8 @@ namespace MenuPrincipal
 
             //Cargar juegos
             cargarJuegos();
-        }   
+        }
+
+
     }
 }
