@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarEditarJuegos));
             bntNombre = new Label();
             txtNombre = new TextBox();
             btnTiempoDjuego = new Label();
@@ -128,6 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(526, 313);
             Controls.Add(txtCantidadDeJugadores);
             Controls.Add(button2);
@@ -139,6 +141,7 @@
             Controls.Add(btnTiempoDjuego);
             Controls.Add(txtNombre);
             Controls.Add(bntNombre);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AgregarEditarJuegos";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Agregar Editar Juegos";
