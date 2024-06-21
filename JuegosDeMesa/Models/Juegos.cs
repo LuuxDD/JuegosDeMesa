@@ -11,8 +11,8 @@ namespace JuegosDeMesa.Models
       
             public string _id { get; set; }
             public string nombre { get; set; }
-            public string tiempodejuego { get; set; }
-            public string CantidadDeJugadores { get; set; }
+            public int tiempodejuego { get; set; }
+            public int CantidadDeJugadores { get; set; }
             public string editorial { get; set; }
         
     }

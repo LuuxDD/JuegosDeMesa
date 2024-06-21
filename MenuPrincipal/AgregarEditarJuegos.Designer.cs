@@ -34,11 +34,13 @@
             btnTiempoDjuego = new Label();
             btnCantidadDeJugadores = new Label();
             bntEditorial = new Label();
-            txtTiempoDeJuego = new TextBox();
             txtEditorial = new TextBox();
             bntGuardar = new Button();
             button2 = new Button();
-            txtCantidadDeJugadores = new TextBox();
+            tiempoDeJuego = new NumericUpDown();
+            cantidadDeJugadores = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)tiempoDeJuego).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cantidadDeJugadores).BeginInit();
             SuspendLayout();
             // 
             // bntNombre
@@ -84,13 +86,6 @@
             bntEditorial.TabIndex = 4;
             bntEditorial.Text = "Editorial";
             // 
-            // txtTiempoDeJuego
-            // 
-            txtTiempoDeJuego.Location = new Point(160, 115);
-            txtTiempoDeJuego.Name = "txtTiempoDeJuego";
-            txtTiempoDeJuego.Size = new Size(296, 23);
-            txtTiempoDeJuego.TabIndex = 5;
-            // 
             // txtEditorial
             // 
             txtEditorial.Location = new Point(111, 205);
@@ -118,12 +113,21 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // txtCantidadDeJugadores
+            // tiempoDeJuego
             // 
-            txtCantidadDeJugadores.Location = new Point(191, 162);
-            txtCantidadDeJugadores.Name = "txtCantidadDeJugadores";
-            txtCantidadDeJugadores.Size = new Size(265, 23);
-            txtCantidadDeJugadores.TabIndex = 10;
+            tiempoDeJuego.Location = new Point(174, 110);
+            tiempoDeJuego.Name = "tiempoDeJuego";
+            tiempoDeJuego.Size = new Size(282, 23);
+            tiempoDeJuego.TabIndex = 11;
+            tiempoDeJuego.TextAlign = HorizontalAlignment.Right;
+            // 
+            // cantidadDeJugadores
+            // 
+            cantidadDeJugadores.Location = new Point(204, 157);
+            cantidadDeJugadores.Name = "cantidadDeJugadores";
+            cantidadDeJugadores.Size = new Size(252, 23);
+            cantidadDeJugadores.TabIndex = 12;
+            cantidadDeJugadores.TextAlign = HorizontalAlignment.Right;
             // 
             // AgregarEditarJuegos
             // 
@@ -131,11 +135,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(526, 313);
-            Controls.Add(txtCantidadDeJugadores);
+            Controls.Add(cantidadDeJugadores);
+            Controls.Add(tiempoDeJuego);
             Controls.Add(button2);
             Controls.Add(bntGuardar);
             Controls.Add(txtEditorial);
-            Controls.Add(txtTiempoDeJuego);
             Controls.Add(bntEditorial);
             Controls.Add(btnCantidadDeJugadores);
             Controls.Add(btnTiempoDjuego);
@@ -145,6 +149,8 @@
             Name = "AgregarEditarJuegos";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Agregar Editar Juegos";
+            ((System.ComponentModel.ISupportInitialize)tiempoDeJuego).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cantidadDeJugadores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,10 +162,10 @@
         private Label btnTiempoDjuego;
         private Label btnCantidadDeJugadores;
         private Label bntEditorial;
-        private TextBox txtTiempoDeJuego;
         private TextBox txtEditorial;
         private Button bntGuardar;
         private Button button2;
-        private TextBox txtCantidadDeJugadores;
+        private NumericUpDown tiempoDeJuego;
+        private NumericUpDown cantidadDeJugadores;
     }
 }

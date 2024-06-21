@@ -17,7 +17,7 @@ namespace JuegosDeMesa.Views
     {
         private string idJuegoSeleccionado;
 
-        JuegosRepository repo = new JuegosRepository(); 
+        JuegosRepository repo = new JuegosRepository();
 
 
         //Construsctor
@@ -36,14 +36,14 @@ namespace JuegosDeMesa.Views
 
         private async void cargarJuegoDatosEnPantalla()
         {
-            
-                Juegos? juego = await repo.ObtenerId(this.idJuegoSeleccionado);
-            
+
+            Juegos? juego = await repo.ObtenerId(this.idJuegoSeleccionado);
+
             if (juego != null)
             {
                 txtNombre.Text = juego.nombre;
-                txtCantidadDeJugadores.Text = juego.CantidadDeJugadores;
-                txtTiempoDeJuego.Text = juego.tiempodejuego;
+                cantidadDeJugadores.Value = juego.CantidadDeJugadores;
+                tiempoDeJuego.Value = juego.tiempodejuego;
                 txtEditorial.Text = juego.editorial;
             }
             else
@@ -60,13 +60,13 @@ namespace JuegosDeMesa.Views
 
         private async void bntGuardar_Click(object sender, EventArgs e)
         {
-            if (this.idJuegoSeleccionado != null) 
-            
+            if (this.idJuegoSeleccionado != null)
+
             {
 
                 await repo.ActualizarAsync(txtNombre.Text,
-                           txtTiempoDeJuego.Text,
-                           txtCantidadDeJugadores.Text,
+                           (int)cantidadDeJugadores.Value,
+                           (int)tiempoDeJuego.Value,
                            txtEditorial.Text,
                            this.idJuegoSeleccionado);
                 this.Close();
@@ -75,14 +75,16 @@ namespace JuegosDeMesa.Views
             else
             {
 
-            
-            await repo.AgregarAsync(txtNombre.Text,
-                           txtTiempoDeJuego.Text,
-                           txtCantidadDeJugadores.Text,
-                           txtEditorial.Text);
-            this.Close();
+
+                await repo.AgregarAsync(txtNombre.Text,
+                                (int)cantidadDeJugadores.Value,
+                                (int)tiempoDeJuego.Value,
+                               txtEditorial.Text);
+                this.Close();
 
             }
         }
+
+
     }
 }

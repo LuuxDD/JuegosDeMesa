@@ -29,7 +29,7 @@ namespace JuegosDeMesa.Repositories
 
         }
 
-        public async Task<Juegos?> AgregarAsync(string nombre, string tiempodejuego, string cantidadDeJugadores, string editorial)
+        public async Task<Juegos?> AgregarAsync(string nombre, int tiempodejuego, int cantidadDeJugadores, string editorial)
         {
             Juegos juego = new Juegos()
             {
@@ -51,7 +51,7 @@ namespace JuegosDeMesa.Repositories
             return JsonConvert.DeserializeObject<Juegos>(await response.Content.ReadAsStringAsync());
         }
 
-        public async Task<Juegos?> ActualizarAsync(string nombre, string tiempodejuego, string cantidadDeJugadores, string editorial, string id)
+        public async Task<Juegos?> ActualizarAsync(string nombre, int tiempodejuego, int cantidadDeJugadores, string editorial, string id)
         {
             //creamos un objeto del tipo Libro con los parámetros que llegan
             Juegos juego = new Juegos()
