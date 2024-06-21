@@ -63,6 +63,26 @@ namespace MenuPrincipal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cazadora {
+            get {
+                object obj = ResourceManager.GetObject("cazadora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cazadora2 {
+            get {
+                object obj = ResourceManager.GetObject("cazadora2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap juegosdemesa {
             get {
                 object obj = ResourceManager.GetObject("juegosdemesa", resourceCulture);
